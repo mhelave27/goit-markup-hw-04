@@ -15,6 +15,8 @@
     --cornflower: #e7e9fc;
     --white: #fff;
     --blue: #0000ff;
+    --green: rgba(49, 208, 170, 1);
+    --light-slate: rgba(142, 143, 153, 1);
 }
 
 body {
@@ -107,10 +109,13 @@ address {
     letter-spacing: 0.32px;
 }  
 
-.hero {
-    background-color: var(--navy-blue);
+.hero { 
+    /* background-color: var(--navy-blue); */
     padding: 188px 0;
-   
+    background-image: linear-gradient(rgba(46,47,66,0.7),rgba(46,47,66,0.7)),url(/images/people-office.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .hero-heading {
@@ -146,6 +151,17 @@ address {
     background-color: var(--ocean);
 }
 
+    /* ----------------Features Section--------------- */
+
+.features-icon {
+    background-color: var(--cloud);
+    padding: 24px 100px;
+    top: 120px;
+    border-radius: 4px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
 
 .features {
     padding: 120px 0px;
@@ -175,6 +191,8 @@ address {
     letter-spacing: 0.32px;
 }
 
+    /* ------------Services Section--------------- */
+
 .services {
     padding-bottom: 120px;
 }
@@ -196,9 +214,18 @@ address {
     justify-content: center;
 }
 
+    /* ----------------Team Section------------------ */
 .team {
     background-color: var(--cloud);
     padding: 120px 0px;
+}
+
+.team-list-item:hover {
+    box-shadow: 6px 6px 40px 10px rgba(46, 47, 66, 0.16);
+    transform: translateY(20px);
+    backdrop-filter: blur(5px);
+    transition: 0.6s;
+
 }
 
 .team-title {
@@ -217,28 +244,123 @@ address {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
+.icons-item {
+    align-items: center;
+    padding: 12px;
+    margin-top: 12px;
+    display: inline-flex;
+    cursor: pointer;
+    background-color: var(--iris);
+    border-radius: 40px;
+    justify-content: center;
+    margin-left: 12px;
+    
+   
+}
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--white);
+    stroke-width: 1px;
+    stroke:var(--white);
+}
+
+.icons-item:hover {
+   background-color: var(--ocean);
+}
+
+    /* --------------------Client Section-------------------- */
+.client-section {
+    background-color: var(--cornflower-);
+    padding: 150px 0px;
+    text-align: center;
+    
+}
+
+.client-title {
+    font-weight: 700; 
+    font-size: 36px; 
+    line-height: 40px;
+    color: var(--navy-blue);
+    margin-bottom: 75px;
+    
+}
+
+.client-logo {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.client-logo img {
+    border: solid 1px var(--light-slate);
+    border-radius: 5px;
+    width: 168px;
+    height:88px;
+    padding: 16px 32px;
+    
+}
+
+.section-client-container img:hover{
+    background-color: var(--iris);
+}
+    /* -----------------Footer Section------------------- */
+
+.footer-section-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+}
 .footer-description {
     color: var(--cloud);
     font-size: 16px;
     line-height: 24px;
-    /* 150% */
     letter-spacing: 0.32px;
+    margin-top: 17px;  
 }
 
-.footer {
+footer {
     background: var(--navy-blue);
-    padding: 101px 0px;
+    padding: 101px;
 }
 
-.footer-description {
-   margin-top: 17px;
-   font-size: 16px;
-   line-height: 24px;
-   letter-spacing: 2%;
+.media-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-left: 120px;    
+}    
 
+.footer-icon {
+    width: 24px;
+    height:24px;
+    fill: var(--white);
+    stroke-width: 1px;
+    stroke: var(--white);
 }
 
- /* --WEBSTUDIO L O G O------ */
+.footer-icons-item {
+    align-items: center;
+    padding: 8px;
+    margin-top: 32px;
+    display: flex;
+    background-color: var(--iris);
+    border-radius: 40px;
+    justify-content: center;
+    margin-left: 16px;
+    cursor: pointer;
+    
+}
+
+.footer-icons-item:hover{
+    background-color: var(--green);
+}
+
+    /* --WEBSTUDIO L O G O------ */
 
 .colored {
     color: var(--iris);
@@ -272,7 +394,7 @@ address {
 }
 
 
-/*------- PORTFOLIO HTML-----*/
+    /*------- PORTFOLIO HTML-----*/
 
 button {
     cursor: pointer;
@@ -304,13 +426,20 @@ button {
     line-height: 24px;
     letter-spacing: 0.64px;
     font-family: inherit;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+
 }
 
-.portfolio-button:hover {
+.portfolio-button:hover, .portfolio-button:focus, .portfolio-button:active{
     color: var(--white);
     background: var(--ocean);
     border: var(--ocean);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .blue {
@@ -330,15 +459,23 @@ button {
     line-height: 24px;
     letter-spacing: 0.64px;
     font-size: inherit;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
-.blue:hover{
+.blue:hover, .blue:focus, .blue:active {
     background: var(--iris);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-}
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}   
 
 .project-card1 {
     padding-bottom: 96px;
+    cursor: pointer;
 }
 
 .project-list-item {
@@ -365,7 +502,7 @@ button {
     line-height: 24px;
 }
 
-.project-details {
+.prjoect-details {
     padding: 32px 32px;
     border: 1px solid var(--CORNFLOWER, #E7E9FC);
     background: var(--WHITE, #FFF);
@@ -373,4 +510,11 @@ button {
 
 .project {
     margin-top: 48px;
+}
+
+.project:hover {
+    box-shadow: 6px 6px 40px 10px rgba(46, 47, 66, 0.16);
+    transform: translateY(20px);
+    backdrop-filter: blur(5px);
+    transition: 0.6s;
 }
