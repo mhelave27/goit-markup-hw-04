@@ -335,7 +335,6 @@ address {
     justify-content: center;
     cursor: pointer;
     column-gap: 24px;
-
 }
 
 .client-logo {
@@ -361,8 +360,8 @@ address {
     padding: 16px 32px;
 }
 
-.client-logo:hover svg{
-    fill: var(--iris);
+.client-logo:hover .client-logo-link {
+    color: var(--ocean);
 }
     /* -----------------Footer Section------------------- */
 
@@ -458,7 +457,9 @@ footer {
 
 
     /*------- PORTFOLIO HTML-----*/
-
+.project-card1 {
+    padding-bottom: 120px;
+}
 button {
     cursor: pointer;
 }
@@ -538,6 +539,7 @@ button {
 
 .project-list-item {
     column-gap: 24px;
+    row-gap: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -550,6 +552,7 @@ button {
     font-weight: 500;
     letter-spacing: 0.4px;
     line-height: 24px;
+    margin-bottom: 8px;
 }
 
 .project-description {
@@ -560,16 +563,13 @@ button {
 }
 
 .project-details {
-    margin: 32px 0;
-    padding: 0 16px;
-    justify-content: center;
-    
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower);
+    border-top: unset;
 }
 
 .project-links-item {
-    border: 1px solid var(--cornflower);
     transition: box-shadow var(--transition-duration);
-    margin-top: 30px;
 }
 
 .project-links-item:hover {
